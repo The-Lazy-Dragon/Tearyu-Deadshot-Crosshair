@@ -19,7 +19,7 @@
 [![Chrome Extension](https://img.shields.io/badge/Type-Chrome%20Extension-00fff7?style=flat-square)](#)
 [![No Framework](https://img.shields.io/badge/Framework-None%20Needed-3a486a?style=flat-square)](#)
 [![Crosshair Shapes](https://img.shields.io/badge/Shapes-15+-712637?style=flat-square)](#-crosshair-shapes)
-[![Version](https://img.shields.io/badge/Version-1.0-00fff7?style=flat-square)](#)
+[![Version](https://img.shields.io/badge/Version-1.1-00fff7?style=flat-square)](#)
 
 *"just use the default crosshair bro" — someone with terrible aim*
 
@@ -63,16 +63,16 @@ Six panels on the right side of your screen. Click the buttons or use the keys:
 
 | Key | Panel | What it does |
 |-----|-------|-------------|
-| `\` | ✛ Style | Crosshair type, master on/off |
+| `\` | ✛ Style | Crosshair type, master on/off, psychedelic mode |
 | `O` | 🎨 Colors | Main color, outline color, opacity |
 | `.` | ⚙ Details | Outline, center dot, dot size, circle radius |
 | `I` | ┼ Arms | Toggle individual arms on/off |
 | `/` | ⇔ Dims | Length, thickness, gap |
-| `` ` `` | 📊 HUD | FPS counter, ping, key tracker |
+| `` ` `` | 📊 HUD | FPS, ping, key tracker, overlay color, preview toggle |
 | `U` | — | Hide / Show the entire sidebar |
 
-Panels are **draggable** — grab anywhere that isn't a control and move it wherever.
-
+Panels are **draggable** — grab anywhere that isn't a control and move it wherever.  
+The **preview box** is also draggable — pick it up and put it wherever it doesn't bother you.  
 Settings **auto-save** to your browser. They survive page reloads.
 
 ---
@@ -91,11 +91,19 @@ Settings **auto-save** to your browser. They survive page reloads.
 
 ---
 
+## 🍄 Psychedelic Mode
+
+Found in the **Style** panel. Turns on and the crosshair, outline, and all HUD overlays start smoothly cycling through the entire color spectrum in real time. Like you're on shrooms but you can still headshot people. Speed is adjustable.
+
+---
+
 ## 📊 HUD Overlays
 
 - **Live FPS** — sits top left, updates every second
 - **Live Ping** — estimated, refreshes every 2s
 - **Key Tracker** — shows WASD · LMB · RMB · Shift · Space · R · F
+- **Overlay Color** — recolor FPS, ping, and key tracker to any color you want
+- **Preview Box** — toggle it off from the HUD panel, drag it anywhere
 
 Toggle each one independently from the HUD panel.
 
@@ -111,6 +119,19 @@ deadshot-extension/
 ├── icon48.png
 └── icon128.png
 ```
+
+---
+
+## 📋 Changelog
+
+### v1.1
+- 🍄 Added **Psychedelic Mode** — full spectrum color cycling on crosshair + HUD
+- 🎨 Added **Overlay Color** picker — recolor FPS, ping, and key tracker
+- 👁 Added **Preview toggle** — hide the preview box from HUD panel
+- 🖱 Made the **preview box draggable** — move it wherever
+
+### v1.0
+- Initial release — crosshair engine, 15+ shapes, sidebar UI, HUD overlays, key tracker
 
 ---
 

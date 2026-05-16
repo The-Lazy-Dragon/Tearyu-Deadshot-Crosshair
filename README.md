@@ -19,7 +19,7 @@
 [![Chrome Extension](https://img.shields.io/badge/Type-Chrome%20Extension-00fff7?style=flat-square)](#)
 [![No Framework](https://img.shields.io/badge/Framework-None%20Needed-3a486a?style=flat-square)](#)
 [![Crosshair Shapes](https://img.shields.io/badge/Shapes-15+-712637?style=flat-square)](#-crosshair-shapes)
-[![Version](https://img.shields.io/badge/Version-1.1.1-00fff7?style=flat-square)](#)
+[![Version](https://img.shields.io/badge/Version-1.1.2-00fff7?style=flat-square)](#)
 
 *"just use the default crosshair bro" — someone with terrible aim*
 
@@ -123,6 +123,13 @@ deadshot-extension/
 ---
 
 ## 📋 Changelog
+
+### v1.1.2
+- 🎨 Rewrote psychedelic mode — now runs entirely on the GPU via CSS `hue-rotate` animation
+- Zero JS canvas repaints while psychedelic is active
+- Speed slider updates the animation duration in real time
+- JS interval reduced to a 2s housekeeping tick only
+- Tested on a potato PC. Runs fine. v1.1.1 could not say the same.
 
 ### v1.1.1
 - 🐛 Fixed psychedelic mode tanking game performance — throttled from 60fps to 20fps

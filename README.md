@@ -19,7 +19,7 @@
 [![Chrome Extension](https://img.shields.io/badge/Type-Chrome%20Extension-00fff7?style=flat-square)](#)
 [![No Framework](https://img.shields.io/badge/Framework-None%20Needed-3a486a?style=flat-square)](#)
 [![Crosshair Shapes](https://img.shields.io/badge/Shapes-15+-712637?style=flat-square)](#-crosshair-shapes)
-[![Version](https://img.shields.io/badge/Version-1.1-00fff7?style=flat-square)](#)
+[![Version](https://img.shields.io/badge/Version-1.1.1-00fff7?style=flat-square)](#)
 
 *"just use the default crosshair bro" — someone with terrible aim*
 
@@ -123,6 +123,12 @@ deadshot-extension/
 ---
 
 ## 📋 Changelog
+
+### v1.1.1
+- 🐛 Fixed psychedelic mode tanking game performance — throttled from 60fps to 20fps
+- Preview box no longer animates when you're not looking at it
+- Overlay color now updates via CSS variable instead of hammering the DOM every frame
+- *The one I'm not proud of*
 
 ### v1.1
 - 🍄 Added **Psychedelic Mode** — full spectrum color cycling on crosshair + HUD

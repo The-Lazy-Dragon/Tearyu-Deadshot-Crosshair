@@ -19,7 +19,8 @@
 [![Chrome Extension](https://img.shields.io/badge/Type-Chrome%20Extension-00fff7?style=flat-square)](#)
 [![No Framework](https://img.shields.io/badge/Framework-None%20Needed-3a486a?style=flat-square)](#)
 [![Crosshair Shapes](https://img.shields.io/badge/Shapes-15+-712637?style=flat-square)](#-crosshair-shapes)
-[![Version](https://img.shields.io/badge/Version-1.1.2-00fff7?style=flat-square)](#)
+[![Custom Images](https://img.shields.io/badge/Custom%20Images-Supported-00fff7?style=flat-square)](#-custom-images)
+[![Version](https://img.shields.io/badge/Version-2.0-ff153f?style=flat-square)](#)
 
 *"just use the default crosshair bro" — someone with terrible aim*
 
@@ -29,7 +30,7 @@
 
 ## ⚡ What is this?
 
-A crosshair extension to be added thru your Chrome Extensions for deadshot.io, that you can customise as per your needs, so u don't fucking need Tampermonkey. Custom Images are NOT SUPPORTED AND **"MAY BE"** ADDED IN A FUTURE UPDATE., if I feel like it.
+A crosshair extension to be added thru your Chrome Extensions for deadshot.io, that you can customise as per your needs, so u don't fucking need Tampermonkey. Custom Images ARE NOW SUPPORTED. More features may come, if I feel like it.
 
 So yeah. Just a crosshair.
 
@@ -59,7 +60,7 @@ Extensions → Manage Extensions
 
 ## 🎮 Controls
 
-Six panels on the right side of your screen. Click the buttons or use the keys:
+Seven panels on the right side of your screen. Click the buttons or use the keys:
 
 | Key | Panel | What it does |
 |-----|-------|-------------|
@@ -68,6 +69,7 @@ Six panels on the right side of your screen. Click the buttons or use the keys:
 | `.` | ⚙ Details | Outline, center dot, dot size, circle radius |
 | `I` | ┼ Arms | Toggle individual arms on/off |
 | `/` | ⇔ Dims | Length, thickness, gap |
+| `P` | 🖼 Images | All 4 custom image modes |
 | `` ` `` | 📊 HUD | FPS, ping, key tracker, overlay color, preview toggle |
 | `U` | — | Hide / Show the entire sidebar |
 
@@ -79,7 +81,7 @@ Settings **auto-save** to your browser. They survive page reloads.
 
 ## ✨ Crosshair Shapes
 
-15+ shapes across 5 categories:
+15+ vector shapes across 5 categories. Mix with custom images however you want.
 
 | Category | Styles |
 |----------|--------|
@@ -91,21 +93,45 @@ Settings **auto-save** to your browser. They survive page reloads.
 
 ---
 
+## 🖼 Custom Images
+
+Upload PNG, JPG, or SVG. Transparent backgrounds are preserved and render clean. All 4 modes work **simultaneously** — stack them however you want.
+
+### Mode 1 — Full Crosshair Image
+Replaces the entire vector crosshair with your image. Drop in any crosshair PNG and it just works. Size and opacity sliders. Optional spin with speed control.
+
+### Mode 2 — Custom Dot
+Replaces or adds to the center dot. Any image. Optional spin.
+
+### Mode 3 — Custom Arms
+Tiles an image along each arm instead of drawing a line. Tile size and spacing adjustable. Respects which arms are enabled in the Arms panel.
+
+### Mode 4 — Orbit Border
+Stamps a repeating image around the center in a **circle, oval, or square** pattern. Think eggs spinning in a circle. Or skulls. Or whatever you upload.
+- **Count** — how many icons
+- **Radius** — how far from the center
+- **Orbit** — rotate the whole formation around the center
+- **Self spin** — each icon spins on its own axis independently
+
+Images are stored as base64 in your browser. They persist between sessions without needing to re-upload.
+
+---
+
 ## 🍄 Psychedelic Mode
 
-Found in the **Style** panel. Turns on and the crosshair, outline, and all HUD overlays start smoothly cycling through the entire color spectrum in real time. Like you're on shrooms but you can still headshot people. Speed is adjustable.
+Found in the **Style** panel. The crosshair, outline, and all HUD overlays start smoothly cycling through the entire color spectrum in real time. Like you're on shrooms but you can still headshot people. Runs on the GPU via CSS hue-rotate — no JS canvas repaints. Speed is adjustable. Potato PC approved.
 
 ---
 
 ## 📊 HUD Overlays
 
-- **Live FPS** — sits top left, updates every second
-- **Live Ping** — estimated, refreshes every 2s
-- **Key Tracker** — shows WASD · LMB · RMB · Shift · Space · R · F
-- **Overlay Color** — recolor FPS, ping, and key tracker to any color you want
-- **Preview Box** — toggle it off from the HUD panel, drag it anywhere
+All sit top-left. Toggle each one independently from the HUD panel.
 
-Toggle each one independently from the HUD panel.
+- **Live FPS** — updates every second
+- **Live Ping** — estimated, refreshes every 2s
+- **Key Tracker** — WASD · LMB · RMB · Shift · Space · R · F
+- **Overlay Color** — recolor all of the above to any color you want
+- **Preview Box** — always-visible crosshair preview, toggleable and draggable
 
 ---
 
@@ -124,24 +150,34 @@ deadshot-extension/
 
 ## 📋 Changelog
 
+### v2.0 — The Image Update
+- 🖼 **Mode 1** — Full PNG/JPG/SVG crosshair. Replaces vector entirely. Transparent backgrounds preserved.
+- 🎯 **Mode 2** — Custom dot image. Optional spin.
+- 💫 **Mode 3** — Custom arm tiles. Tiled along each arm instead of a line.
+- 🌀 **Mode 4** — Orbit border. Repeating images in a circle, oval, or square. Can orbit, stay still, or spin on their own axis. (eggs spinning in a circle. u know what it is.)
+- All 4 modes work simultaneously on top of each other and on top of the vector crosshair
+- Single shared canvas — no layer stacking, potato-safe
+- rAF animation loop only runs when something is actually animating. Static = zero CPU.
+- Images stored as base64 in localStorage — persist between sessions
+- New **Images** panel (`P` key)
+
 ### v1.1.2
-- 🎨 Rewrote psychedelic mode — now runs entirely on the GPU via CSS `hue-rotate` animation
+- 🎨 Rewrote psychedelic mode — now runs on the GPU via CSS `hue-rotate` animation
 - Zero JS canvas repaints while psychedelic is active
-- Speed slider updates the animation duration in real time
-- JS interval reduced to a 2s housekeeping tick only
+- Speed slider updates animation duration in real time
 - Tested on a potato PC. Runs fine. v1.1.1 could not say the same.
 
 ### v1.1.1
 - 🐛 Fixed psychedelic mode tanking game performance — throttled from 60fps to 20fps
 - Preview box no longer animates when you're not looking at it
-- Overlay color now updates via CSS variable instead of hammering the DOM every frame
+- Overlay color updates via CSS variable instead of hammering the DOM
 - *The one I'm not proud of*
 
 ### v1.1
 - 🍄 Added **Psychedelic Mode** — full spectrum color cycling on crosshair + HUD
 - 🎨 Added **Overlay Color** picker — recolor FPS, ping, and key tracker
 - 👁 Added **Preview toggle** — hide the preview box from HUD panel
-- 🖱 Made the **preview box draggable** — move it wherever
+- 🖱 Made the **preview box draggable**
 
 ### v1.0
 - Initial release — crosshair engine, 15+ shapes, sidebar UI, HUD overlays, key tracker
@@ -150,9 +186,9 @@ deadshot-extension/
 
 ## ⚠ Known Stuff
 
-- Custom images not supported. Maybe later. Maybe not.
 - Chrome only. No Firefox support, don't ask.
 - Works on `deadshot.io` and `www.deadshot.io` only.
+- Large image files will bloat your localStorage. Keep uploads reasonable.
 
 ---
 

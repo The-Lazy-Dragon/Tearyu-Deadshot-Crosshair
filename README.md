@@ -18,9 +18,9 @@
 [![Made by The Lazy Dragon](https://img.shields.io/badge/Made%20by-The%20Lazy%20Dragon%20怠竜-ff153f?style=flat-square)](https://github.com/The-Lazy-Dragon)
 [![Chrome Extension](https://img.shields.io/badge/Type-Chrome%20Extension-00fff7?style=flat-square)](#)
 [![No Framework](https://img.shields.io/badge/Framework-None%20Needed-3a486a?style=flat-square)](#)
-[![Crosshair Shapes](https://img.shields.io/badge/Shapes-15+-712637?style=flat-square)](#-crosshair-shapes)
+[![Shapes](https://img.shields.io/badge/Shapes-15+-712637?style=flat-square)](#-crosshair-shapes)
 [![Custom Images](https://img.shields.io/badge/Custom%20Images-Supported-00fff7?style=flat-square)](#-custom-images)
-[![Version](https://img.shields.io/badge/Version-2.0-ff153f?style=flat-square)](#)
+[![Version](https://img.shields.io/badge/Version-2.1-ff153f?style=flat-square)](#)
 
 *"just use the default crosshair bro" — someone with terrible aim*
 
@@ -58,79 +58,142 @@ Extensions → Manage Extensions
 
 ---
 
+## 📱 Mobile
+
+### Android
+Kiwi Browser supports Chrome extensions natively. Same ZIP, same install steps, works out of the box.
+
+> **[Download Kiwi Browser](https://kiwibrowser.com)** → install it → follow the same install steps above inside Kiwi.
+
+### iOS
+Every browser on iOS is forced to use Apple's WebKit engine under the hood — Chrome on iOS is literally just Safari with a skin, no Blink, no extension support. The workaround is **Orion Browser** by Kagi, which supports Chrome extensions on top of WebKit.
+
+> **[Download Orion Browser](https://kagi.com/orion)** → install the extension → play deadshot.io in Orion.
+
+---
+
 ## 🎮 Controls
 
-Seven panels on the right side of your screen. Click the buttons or use the keys:
+Eight panels on the right side of your screen. Click the buttons or use the keys:
 
 | Key | Panel | What it does |
 |-----|-------|-------------|
-| `\` | ✛ Style | Crosshair type, master on/off, psychedelic mode |
-| `O` | 🎨 Colors | Main color, outline color, opacity |
-| `.` | ⚙ Details | Outline, center dot, dot size, circle radius |
+| `\` | ✛ Style | Crosshair type, spin, breathe, psychedelic mode |
+| `O` | 🎨 Colors | Main color, outline, opacity, hit marker |
+| `.` | ⚙ Details | Outline toggle, dot type & size, circle radius |
 | `I` | ┼ Arms | Toggle individual arms on/off |
 | `/` | ⇔ Dims | Length, thickness, gap |
 | `P` | 🖼 Images | All 4 custom image modes |
-| `` ` `` | 📊 HUD | FPS, ping, key tracker, overlay color, preview toggle |
+| `K` | 💾 Presets | Save/load slots, export/import codes |
+| `1`–`5` | — | Instantly load preset slot 1–5 |
+| `` ` `` | 📊 HUD | FPS, ping, key tracker, overlay color, preview |
 | `U` | — | Hide / Show the entire sidebar |
 
-Panels are **draggable** — grab anywhere that isn't a control and move it wherever.  
-The **preview box** is also draggable — pick it up and put it wherever it doesn't bother you.  
-Settings **auto-save** to your browser. They survive page reloads.
+Panels are **draggable** — grab anywhere that isn't a control.  
+The **preview box** is also draggable — move it wherever.  
+Settings **auto-save**. They survive page reloads.
 
 ---
 
 ## ✨ Crosshair Shapes
 
-15+ vector shapes across 5 categories. Mix with custom images however you want.
+15+ vector shapes. Combine with images, spin, breathe, psychedelic — all at once.
 
 | Category | Styles |
 |----------|--------|
-| **Cross** | Cross (no dot) · Cross + Dot |
+| **Cross** | Cross · Cross + Dot |
 | **Circle** | Circle · Circle + Cross · Circle + Cross + Dot |
 | **Dot** | Dot only |
 | **Diamond** | Diamond · Diamond + Dot · Diamond + Cross |
-| **Square** | Square · Square + Dot · Square + Cross ⊕ · Square + Cross + Dot · Square + X (diagonal) · Square + X + Dot |
+| **Square** | Square · Square + Dot · Square + Cross ⊕ · Square + Cross + Dot · Square + X · Square + X + Dot |
+
+---
+
+## 🔵 Dot Types
+
+For any style that includes a dot, you can pick the dot shape:
+
+| Type | What it looks like |
+|------|-------------------|
+| Circle | Classic round dot |
+| Square | Solid square |
+| Diamond | Rotated square |
+| Horizontal line | Short horizontal bar |
+| Vertical line | Short vertical bar |
+
+Size goes up to 30px.
+
+---
+
+## 🌀 Motion
+
+Found in the **Style** panel. Both work at the same time.
+
+**Spin** — the entire crosshair rotates continuously. Speed adjustable from slow drift to full send.
+
+**Breathe** — the arms pulse in and out rhythmically. Speed and amount both adjustable. Looks like your crosshair is alive.
+
+---
+
+## ⚡ Hit Marker
+
+Found in the **Colors** panel. Flashes 4 diagonal ticks on LMB click — like actual hit feedback but client side.
+
+- Custom color, separate from your crosshair color
+- Size and thickness sliders
+- Duration: 50ms (blink) to 500ms (lingers)
+- Toggle on/off
 
 ---
 
 ## 🖼 Custom Images
 
-Upload PNG, JPG, or SVG. Transparent backgrounds are preserved and render clean. All 4 modes work **simultaneously** — stack them however you want.
+Upload PNG, JPG, or SVG. Transparent backgrounds render clean. All 4 modes work **simultaneously** and stack on top of the vector crosshair.
 
 ### Mode 1 — Full Crosshair Image
-Replaces the entire vector crosshair with your image. Drop in any crosshair PNG and it just works. Size and opacity sliders. Optional spin with speed control.
+Drops your image dead center, replacing the vector crosshair. Size up to 160px. Opacity slider. Optional spin.
 
 ### Mode 2 — Custom Dot
-Replaces or adds to the center dot. Any image. Optional spin.
+Any image as the center dot. Optional spin.
 
 ### Mode 3 — Custom Arms
-Tiles an image along each arm instead of drawing a line. Tile size and spacing adjustable. Respects which arms are enabled in the Arms panel.
+Tiles an image along each arm instead of drawing a line. Tile size and spacing adjustable. Respects which arms are toggled on.
 
-### Mode 4 — Orbit Border
-Stamps a repeating image around the center in a **circle, oval, or square** pattern. Think eggs spinning in a circle. Or skulls. Or whatever you upload.
-- **Count** — how many icons
-- **Radius** — how far from the center
-- **Orbit** — rotate the whole formation around the center
-- **Self spin** — each icon spins on its own axis independently
+### Mode 4 — Orbit / Border
+**Repeating mode** — stamps N copies of an image around a circle, oval, or square path. The eggs-spinning-in-a-circle mode. Count, radius, icon size all adjustable. Can orbit the center or stay static. Each icon can spin on its own axis independently.
 
-Images are stored as base64 in your browser. They persist between sessions without needing to re-upload.
+**Single image mode** — one image, two options:
+- **Travel orbit path** — the image travels around the circle/oval/square continuously
+- **Stay at center** — sits at the center, optional self-spin. Basically a fancy dot replacement. Size goes up to 160px.
+
+Images are stored as base64 in your browser. They persist between sessions without re-uploading.
+
+---
+
+## 💾 Presets
+
+Found in the **Presets** panel (`K`).
+
+**5 save slots** — click a slot to load it, hit "Save to selected slot" to overwrite it.
+
+**Export/Import codes** — exports your entire current settings as a base64 string. Share it with someone, they paste it and import. Instant crosshair sharing.
 
 ---
 
 ## 🍄 Psychedelic Mode
 
-Found in the **Style** panel. The crosshair, outline, and all HUD overlays start smoothly cycling through the entire color spectrum in real time. Like you're on shrooms but you can still headshot people. Runs on the GPU via CSS hue-rotate — no JS canvas repaints. Speed is adjustable. Potato PC approved.
+Found in the **Style** panel. Crosshair, outline, and all HUD overlays cycle through the full color spectrum in real time. Runs on the GPU via CSS hue-rotate — no JS canvas repaints. Potato PC approved. Speed adjustable.
 
 ---
 
 ## 📊 HUD Overlays
 
-All sit top-left. Toggle each one independently from the HUD panel.
+All sit top-left. Toggle each independently from the HUD panel.
 
 - **Live FPS** — updates every second
 - **Live Ping** — estimated, refreshes every 2s
 - **Key Tracker** — WASD · LMB · RMB · Shift · Space · R · F
-- **Overlay Color** — recolor all of the above to any color you want
+- **Overlay Color** — recolor all of the above to any color
 - **Preview Box** — always-visible crosshair preview, toggleable and draggable
 
 ---
@@ -150,45 +213,56 @@ deadshot-extension/
 
 ## 📋 Changelog
 
+### v2.1
+- 🌀 **Spin** — whole crosshair rotates continuously, speed adjustable
+- 💨 **Breathe** — arms pulse in and out, speed + amount adjustable. Both work simultaneously.
+- ⚡ **Hit Marker** — diagonal tick flash on LMB, custom color/size/thickness/duration
+- 🔵 **Dot types** — Circle, Square, Diamond, Horizontal line, Vertical line. Size up to 30px.
+- 💾 **Presets** — 5 save slots + export/import shareable codes (`K` key)
+- 🖼 **Orbit single image mode** — one image that travels the orbit path or sits at center, size up to 160px
+- ┼ **Arms panel** — replaced checkboxes with big toggle buttons
+- Removed redundant "show dot" checkbox — dot is controlled by crosshair type
+
+### v2.1 — The Motion Update
+- 🌀 **Spin** — whole crosshair rotates continuously, speed adjustable
+- 💨 **Breathe** — arms pulse in and out, speed + amount adjustable. Both work simultaneously.
+- ⚡ **Hit Marker** — diagonal tick flash on LMB, custom color/size/thickness/duration
+- 🔵 **Dot types** — Circle, Square, Diamond, Horizontal line, Vertical line. Size up to 30px.
+- 💾 **Presets** — 5 save slots, press `1`–`5` to load instantly, export/import shareable codes (`K` key)
+- 🖼 **Orbit single image mode** — one image that travels the orbit path or sits at center, size up to 160px
+- ┼ **Arms panel** — replaced checkboxes with big toggle buttons
+- 🐛 Arms toggle actually works now. Inline `onclick` handlers are blocked by Chrome's Content Security Policy in extensions. Switched to delegated event listeners.
+
 ### v2.0 — The Image Update
 - 🖼 **Mode 1** — Full PNG/JPG/SVG crosshair. Replaces vector entirely. Transparent backgrounds preserved.
 - 🎯 **Mode 2** — Custom dot image. Optional spin.
 - 💫 **Mode 3** — Custom arm tiles. Tiled along each arm instead of a line.
-- 🌀 **Mode 4** — Orbit border. Repeating images in a circle, oval, or square. Can orbit, stay still, or spin on their own axis. (eggs spinning in a circle. u know what it is.)
-- All 4 modes work simultaneously on top of each other and on top of the vector crosshair
-- Single shared canvas — no layer stacking, potato-safe
-- rAF animation loop only runs when something is actually animating. Static = zero CPU.
-- Images stored as base64 in localStorage — persist between sessions
-- New **Images** panel (`P` key)
+- 🌀 **Mode 4** — Orbit border. Repeating images in a circle, oval, or square. Can orbit, stay still, or spin on their own axis.
+- All 4 modes work simultaneously on top of each other and the vector crosshair
+- Single shared canvas, potato-safe. rAF loop only runs when animating.
+- Images stored as base64 in localStorage
 
 ### v1.1.2
-- 🎨 Rewrote psychedelic mode — now runs on the GPU via CSS `hue-rotate` animation
-- Zero JS canvas repaints while psychedelic is active
-- Speed slider updates animation duration in real time
+- 🎨 Psychedelic mode rewritten — GPU CSS hue-rotate, zero JS canvas repaints
 - Tested on a potato PC. Runs fine. v1.1.1 could not say the same.
 
 ### v1.1.1
-- 🐛 Fixed psychedelic mode tanking game performance — throttled from 60fps to 20fps
-- Preview box no longer animates when you're not looking at it
-- Overlay color updates via CSS variable instead of hammering the DOM
+- 🐛 Fixed psychedelic mode tanking performance — throttled from 60fps to 20fps
 - *The one I'm not proud of*
 
 ### v1.1
-- 🍄 Added **Psychedelic Mode** — full spectrum color cycling on crosshair + HUD
-- 🎨 Added **Overlay Color** picker — recolor FPS, ping, and key tracker
-- 👁 Added **Preview toggle** — hide the preview box from HUD panel
-- 🖱 Made the **preview box draggable**
+- 🍄 Psychedelic Mode, Overlay Color picker, draggable preview box
 
 ### v1.0
-- Initial release — crosshair engine, 15+ shapes, sidebar UI, HUD overlays, key tracker
+- Initial release — 15+ shapes, sidebar UI, HUD overlays, key tracker
 
 ---
 
 ## ⚠ Known Stuff
 
-- Chrome only. No Firefox support, don't ask.
+- Chrome only on desktop. Kiwi Browser on Android. Orion on iOS.
 - Works on `deadshot.io` and `www.deadshot.io` only.
-- Large image files will bloat your localStorage. Keep uploads reasonable.
+- Large image uploads will bloat localStorage. Keep them reasonable.
 
 ---
 
@@ -200,7 +274,6 @@ BSc IT student who builds things way more complex than they need to be and calls
 
 - GitHub: [@The-Lazy-Dragon](https://github.com/The-Lazy-Dragon)
 - Discord: `this.isnt.craig_`
-- Reddit: `u/Red_DevilAS07`
 
 ### Also check out:
 **[NavalStrike](https://github.com/The-Lazy-Dragon/NavalStrike)** — Battleship. But neon. But with 25 ship classes, 35 achievements, a Konami code, procedural audio, and hard AI that actually hurts. One `.html` file.

@@ -36,7 +36,23 @@ Based on the [browser extension](https://github.com/The-Lazy-Dragon/Tearyu-Deads
 
 ---
 
-## 🔨 How to Build the APK
+## 📲 Install the APK
+
+### Option 1 — Just download it (easiest)
+
+**1.** Go to the [Releases](https://github.com/The-Lazy-Dragon/Tearyu-Deadshot-Crosshair/releases) tab of this repo
+
+**2.** Download `怠竜-deadshot.apk` from the latest release
+
+**3.** Transfer it to your phone if needed (or download directly on your phone)
+
+**4.** On your phone: **Settings → Apps → Special app access → Install unknown apps** → enable it for your file manager or browser
+
+**5.** Tap the APK → Install → done
+
+---
+
+### Option 2 — Build it yourself
 
 > You need **Android Studio** installed. Download it at [developer.android.com/studio](https://developer.android.com/studio). Open it once and let it finish downloading the SDK before you start.
 
@@ -60,9 +76,9 @@ Build → Build Bundle(s) / APK(s) → Build APK(s)
 app/build/outputs/apk/debug/app-debug.apk
 ```
 
-**6.** Transfer it to your phone (USB, Google Drive, whatever) → tap to install.
+**6.** Transfer it to your phone → tap to install.
 
-> Make sure **Install unknown apps** is enabled on your device. Android → Settings → Apps → Special app access → Install unknown apps → enable for your file manager or browser.
+> You can rename the APK to whatever you want. Android reads the app name from inside the file, not the filename.
 
 ---
 

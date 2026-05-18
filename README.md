@@ -60,10 +60,14 @@ Extensions → Manage Extensions
 
 ## 📱 Mobile
 
-### Android
-Kiwi Browser supports Chrome extensions natively. Same ZIP, same install steps, works out of the box.
+### Android — Native App
+There's a full native Android app in the **[`android` branch](https://github.com/The-Lazy-Dragon/Tearyu-Deadshot-Crosshair/tree/android)** of this repo. WebView-based, proper 怠竜 branding, crosshair toggle, settings panel, about screen. Build it yourself in Android Studio — instructions are in that branch.
 
-> **[Download Kiwi Browser](https://kiwibrowser.com)** → install it → follow the same install steps above inside Kiwi.
+> **[→ Go to the Android branch](https://github.com/The-Lazy-Dragon/Tearyu-Deadshot-Crosshair/tree/android)**
+
+Or if you don't want to build it, **Kiwi Browser** supports Chrome extensions natively — same ZIP, same install steps, works out of the box.
+
+> **[Download Kiwi Browser](https://kiwibrowser.com)** → install it → follow the same steps above inside Kiwi.
 
 ### iOS
 Every browser on iOS is forced to use Apple's WebKit engine under the hood — Chrome on iOS is literally just Safari with a skin, no Blink, no extension support. The workaround is **Orion Browser** by Kagi, which supports Chrome extensions on top of WebKit.
@@ -213,16 +217,6 @@ deadshot-extension/
 
 ## 📋 Changelog
 
-### v2.1
-- 🌀 **Spin** — whole crosshair rotates continuously, speed adjustable
-- 💨 **Breathe** — arms pulse in and out, speed + amount adjustable. Both work simultaneously.
-- ⚡ **Hit Marker** — diagonal tick flash on LMB, custom color/size/thickness/duration
-- 🔵 **Dot types** — Circle, Square, Diamond, Horizontal line, Vertical line. Size up to 30px.
-- 💾 **Presets** — 5 save slots + export/import shareable codes (`K` key)
-- 🖼 **Orbit single image mode** — one image that travels the orbit path or sits at center, size up to 160px
-- ┼ **Arms panel** — replaced checkboxes with big toggle buttons
-- Removed redundant "show dot" checkbox — dot is controlled by crosshair type
-
 ### v2.1 — The Motion Update
 - 🌀 **Spin** — whole crosshair rotates continuously, speed adjustable
 - 💨 **Breathe** — arms pulse in and out, speed + amount adjustable. Both work simultaneously.
@@ -231,6 +225,7 @@ deadshot-extension/
 - 💾 **Presets** — 5 save slots, press `1`–`5` to load instantly, export/import shareable codes (`K` key)
 - 🖼 **Orbit single image mode** — one image that travels the orbit path or sits at center, size up to 160px
 - ┼ **Arms panel** — replaced checkboxes with big toggle buttons
+- ⦿ Removed redundant "show dot" checkbox — dot is controlled by crosshair type
 - 🐛 Arms toggle actually works now. Inline `onclick` handlers are blocked by Chrome's Content Security Policy in extensions. Switched to delegated event listeners.
 
 ### v2.0 — The Image Update
